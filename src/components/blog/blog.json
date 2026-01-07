@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "How to Repot Plants",
+    "image": "src/assets/blog/blog-1.png",
+    "date": "Jun 5, 2023",
+    "readTime": "1 min read",
+    "description": "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading...."
+  },
+  {
+    "id": 2,
+    "title": "How to Treat Leaf Spots",
+    "image": "src/assets/blog/blog-2.png",
+    "date": "Jun 5, 2023",
+    "readTime": "2 min read",
+    "description": "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading...."
+  },
+  {
+    "id": 3,
+    "title": "Keep Them Alive Through the Seasons",
+    "image": "src/assets/blog/blog-3.png",
+    "date": "Jun 5, 2023",
+    "readTime": "1 min read",
+    "description": "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading...."
+  }
+]

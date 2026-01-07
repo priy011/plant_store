@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Ficus lyrata",
+    "price": 35.99,
+    "rating": 4.0,
+    "reviews": 13,
+    "image": "src/assets/products/ficus.png",
+    "tag": "New Arrival"
+  },
+  {
+    "id": 2,
+    "name": "Rusty Flowerpot",
+    "price": 20.99,
+    "rating": 1,
+    "reviews": 0,
+    "image": "src/assets/products/rusty-flowerpot.png",
+    "tag": "New Arrival"
+  },
+  {
+    "id": 3,
+    "name": "Cactus",
+    "price": 19.99,
+    "rating": 4.7,
+    "reviews": 3,
+    "image": "src/assets/products/cactus.png",
+    "tag": "New Arrival"
+  },
+  {
+    "id": 4,
+    "name": "Wooden Basket",
+    "price": 28.99,
+    "rating": 1,
+    "reviews": 0,
+    "image": "src/assets/products/wooden-basket.png",
+    "tag": "New Arrival"
+  }
+]

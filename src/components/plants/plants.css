@@ -1,0 +1,147 @@
+.plants-page {
+  background: #000;
+  color: #fff;
+}
+
+.plants-hero img {
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.plants-layout {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.filters {
+  width: 20%;
+}
+
+.plants-hero{
+    width: 100%;
+}
+
+.count{
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.title{
+    font-size: 48px;
+    margin-block: 36px;
+}
+
+.filters h4 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.filters ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filters li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.filters li.active {
+  font-weight: bold;
+}
+
+.filter-block {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.price-range {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+.products-area {
+  flex: 1;
+}
+
+.products-area h1 {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.product-card {
+  background: #111;
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  height: 85%;
+  background: #e8e2d4;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #6b7b4f;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.price {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.strike {
+  text-decoration: line-through;
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-list li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.product-list li a:focus, .product-list li a:hover{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .plants-layout {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

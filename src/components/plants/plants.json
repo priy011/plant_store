@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Crassula",
+    "price": 19.99,
+    "category": "plants",
+    "isNew": true,
+    "image": "src/assets/products/ficus.png"
+  },
+  {
+    "id": 2,
+    "name": "Rhapis Palm",
+    "price": 14.99,
+    "oldPrice": 19.99,
+    "sale": true,
+    "category": "plants",
+    "image": "src/assets/products/rusty-flowerpot.png"
+  },
+  {
+    "id": 3,
+    "name": "Ficus Lyrata",
+    "price": 35.99,
+    "category": "plants",
+    "image": "src/assets/products/cactus.png"
+  },
+  {
+    "id": 4,
+    "name": "Snake Plant",
+    "price": 24.99,
+    "category": "plants",
+    "image": "src/assets/products/wooden-basket.png"
+  },
+  {
+    "id": 5,
+    "name": "Rusty Flower Pot",
+    "price": 12.99,
+    "category": "pots",
+    "isNew": true,
+    "image": "src/assets/products/rusty-flowerpot.png"
+  },
+  {
+    "id": 6,
+    "name": "Wooden Basket Pot",
+    "price": 16.99,
+    "oldPrice": 19.99,
+    "sale": true,
+    "category": "pots",
+    "image": "src/assets/products/wooden-basket.png"
+  }
+]

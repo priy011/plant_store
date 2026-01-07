@@ -1,0 +1,187 @@
+/* -------------------------
+    NEW ARRIVALS SECTION
+------------------------- */
+.new-arrivals {
+  background: #d5cdbb;
+  padding: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.heading .title {
+  font-size: 32px;
+  color: #5c5a5a;
+}
+
+.shop-all {
+  background-color: #b46000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.shop-all:hover{
+    background-color: rgba(104, 103, 54, 1);
+}
+
+.arrival-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* mobile */
+  gap: 15px;
+}
+
+.arrival-card {
+  position: relative;
+  border-radius: 8px;
+}
+
+.badge {
+  position: absolute;
+  background: rgba(104, 103, 54, 1);
+  color: white;
+  left: 15px;
+  top: 15px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 18px;
+  color: #5c5a5a;
+}
+
+.price {
+  color: #353535;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #000;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.add-to-cart:hover{
+    background-color: #000;
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   BREAKPOINTS
+========================== */
+
+/* TABLET - 768px */
+@media (min-width: 768px) {
+
+  .nav {
+    width: 90%;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .search {
+    display: block;
+  }
+
+  .login-btn {
+    display: flex;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .arrival-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .heading .title {
+    font-size: 50px;
+  }
+}
+
+
+/* LAPTOP - 1024px */
+@media (min-width: 1024px) {
+
+  .nav {
+    max-width: 1200px;
+  }
+
+  .hero-content {
+    margin-inline: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 80px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+
+  .arrival-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* LARGE SCREEN - 1200px+ */
+@media (min-width: 1200px) {
+
+  .hero-content {
+    margin-inline: 180px;
+  }
+
+  .hero-content h1 {
+    font-size: 90px;
+  }
+
+  .heading .title {
+    font-size: 60px;
+  }
+
+  .shop-all {
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+}
+
+.new-arrivals::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 2px solid #b3a995;
+  margin: 20px 0;
+}
+

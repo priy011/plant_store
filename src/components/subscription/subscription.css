@@ -1,0 +1,114 @@
+.subscription-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+}
+
+.subscription-image {
+  background: url("src/assets/subscription-banner.png") center/cover no-repeat;
+}
+
+.subscription-content {
+  background: #b46000;
+  color: white;
+  padding-block: 80px;
+  padding-inline: 120px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subscription-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.subscription-options {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-box {
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 50px;
+  width: 30px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box img {
+  width: 42px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.option span {
+  font-size: 21px;
+}
+
+.primary-btn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 15px 30px;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  max-width: 220px;
+}
+
+.primary-btn:hover {
+  background: white;
+  color: #b46000;
+}
+
+@media (max-width: 768px) {
+  .subscription-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .subscription-options{
+    flex-direction: row;
+  }
+
+  .option{
+    flex-direction: column;
+  }
+
+  .subscription-image {
+    height: 60vh;
+  }
+
+  .subscription-content {
+    padding: 40px 60px;
+    align-items: center;
+  }
+
+  .subscription-content h2 {
+    font-size: 32px;
+  }
+
+  .option span {
+    font-size: 18px;
+  }
+}

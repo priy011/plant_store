@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  z-index: 10;
+  padding: 10px 0;
+  transition: background 0.3s ease;
+}
+
+.header--home {
+  background: transparent;
+}
+
+.header--solid {
+  background: #000;
+  position: sticky;
+}
+
+.nav {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: rgb(5, 5, 5);
+  z-index: 999;
+  border-top: 1px solid #96949480;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.hamburger {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: rgb(5, 5, 5);
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-links li {
+    padding: 16px 20px;
+    font-size: 1rem;
+    list-style: none;
+  }
+}
+
+.nav-links li:hover {
+  background-color: #BE5A09;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.logo img {
+  width: 34px;
+  height: 34px;
+  filter: brightness(0) invert(1);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search,
+.login-btn {
+  background: transparent; 
+  color: white; 
+  padding: 6px 12px; 
+  border-radius: 4px; 
+  font-weight: 500; 
+  cursor: pointer; 
+  background: rgb(5,5,5); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 16px; 
+  border-radius: 6px; 
+  border:solid #96949480;
+}
+
+.login-btn img, 
+.search img{ 
+  filter: brightness(0) invert(1); 
+  height: 30px; 
+  width: 30px; 
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-value {
+  display: flex;
+  gap: 4px;
+}
+
+.wishlist, .cart-img{
+  background: transparent;
+  border: none;
+}
+
+.wishlist img,
+.cart-img img {
+  filter: brightness(0) invert(1);
+  height: 20px;
+  width: 20px;
+  background: transparent;
+}

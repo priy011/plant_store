@@ -1,0 +1,78 @@
+.gram-section {
+  background: #696f38;
+  padding-block: 60px 120px;
+  padding-inline: 40px;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+.gram-title {
+  font-size: 62px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+
+.gram-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gram-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gram-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay hidden by default */
+.gram-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark transparent layer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gram-overlay p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 400;
+  width: 80%;       
+  margin: 0 auto;  
+}
+
+
+.gram-item:hover .gram-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .gram-title {
+    font-size: 36px;
+  }
+
+  .gram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gram-grid {
+    grid-template-columns: 1fr;
+  }
+}

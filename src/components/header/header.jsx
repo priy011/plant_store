@@ -7,16 +7,23 @@ function Header({ cartValue, onCartClick }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const isHome = location.pathname === "/";
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter" && searchTerm.trim()) {
+      navigate(`/allProducts?search=${searchTerm}`);
+      setSearchTerm("");
+      setShowSearch(false);
+    }
+  };
 
   return (
     <header className={`header ${isHome ? "header--home" : "header--solid"}`}>
       <nav className="nav">
-        <button
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           <img src="src/assets/menu.svg" alt="menu" />
         </button>
 
@@ -34,14 +41,29 @@ function Header({ cartValue, onCartClick }) {
         </div>
 
         <div className="actions">
+          {showSearch && (
+            <input
+              className="search-input"
+              type="text"
+              placeholder="Search products..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={handleSearch}
+              autoFocus
+            />
+          )}
+
+          <span
+            className="search"
+            onClick={() => setShowSearch(!showSearch)}
+          >
+            <img src="src/assets/search.svg" alt="search" />
+          </span>
+
           <button className="login-btn">
             <img src="src/assets/login.svg" alt="login" />
             <span>Log In</span>
           </button>
-
-          <span className="search">
-            <img src="src/assets/search.svg" alt="search" />
-          </span>
         </div>
 
         <div onClick={onCartClick}>

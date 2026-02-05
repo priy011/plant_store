@@ -13,7 +13,7 @@ export default function Plants({ onAddToCart }) {
     title = "Plants";
     filteredProducts = plantsData.filter((item) => item.category === "plants");
   } else if (path === "/pots") {
-    title = "Pots"; 
+    title = "Pots";
     filteredProducts = plantsData.filter((item) => item.category === "pots");
   } else if (path === "/sale") {
     title = "Sale";
@@ -66,8 +66,6 @@ export default function Plants({ onAddToCart }) {
                 <div className="price-range">$10 – ${maxPrice}</div>
           </div>
         </aside>
-        {/* RIGHT CONTENT */}
-        {/* HERO */}
         <div className="plants-hero">
           <img src="src/assets/categories/plants.jpg" alt="Plants" />
           <div className="products-area">
@@ -86,9 +84,7 @@ export default function Plants({ onAddToCart }) {
                     ${product.price}
                   </p>
                   <button
-                    onClick={() =>
-                      onAddToCart && onAddToCart(product, 1)
-                    }
+                    onClick={() => onAddToCart?.(product, 1)}
                   >
                     Add to Cart
                   </button>

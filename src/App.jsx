@@ -12,6 +12,8 @@ import ProductModal from "./components/product-modal/product-modal";
 import CartPopup from "./components/cartPopup/cartPopup";
 import Plants from "./components/plants/plants";
 import Footer from "./components/footer/footer";
+import Checkout from "./components/checkout/checkout";
+import OrderSuccess from "./components/orderSuccess/orderSuccess";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -42,7 +44,7 @@ function App() {
   const updateQuantity = (id, delta) => {
     setCartItems((prev) =>
       prev.map((item) =>
-        item.id === id
+        item.id === id 
           ? { ...item, qty: Math.max(1, item.qty + delta) }
           : item
       )
@@ -59,7 +61,6 @@ function App() {
         cartValue={cartValue}
         onCartClick={() => setOpenCart(true)}
       />
-
       <Routes>
         <Route
           path="/"
@@ -95,6 +96,15 @@ function App() {
           path="/sale"
           element={<Plants onAddToCart={addToCart} />}
         />
+        <Route
+          path="/checkout"
+          element={<Checkout cartItems={cartItems} />}
+        />
+        <Route
+         path="/order-success"
+         element
+          ={<OrderSuccess />}
+        />
       </Routes>
       <ProductModal
         product={selectedProduct}
@@ -105,7 +115,7 @@ function App() {
       />
       <CartPopup
         isOpen={openCart && cartItems.length > 0}
-        onClose={() => setOpenCart(false)}
+        onClose={()=> setOpenCart(false)}
         cartItems={cartItems}
         onQtyChange={updateQuantity}
         onRemove={removeItem}

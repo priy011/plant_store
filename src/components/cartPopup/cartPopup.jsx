@@ -1,5 +1,7 @@
 import React from "react";
 import "./cartPopup.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function CartPopup({
   isOpen,
@@ -8,6 +10,7 @@ export default function CartPopup({
   onQtyChange,
   onRemove
 }) {
+  const navigate = useNavigate();
 
   if (!isOpen || cartItems.length === 0) return null;
 
@@ -25,7 +28,7 @@ export default function CartPopup({
         <div className="cart-title">Cart ({totalItems} item{totalItems === 1 ? "" : "s"})</div>
         <hr />
         {cartItems.length === 0 ? (
-          <div className="cart-empty">Your cart is empty.</div>
+          <div className="cart-empty">Your cart is empty</div>
         ) : (
           cartItems.map((cartItem) => (
             <div className="cart-item" key={cartItem.id}>
@@ -62,7 +65,7 @@ export default function CartPopup({
         )}
         <hr />
         <div className="promo-code">
-          <span>🏷️ Enter a promo code</span>
+          <span>🏷️Enter a promo code</span>
         </div>
         <hr />
         <div className="cart-total">
@@ -73,7 +76,16 @@ export default function CartPopup({
           Taxes and shipping are calculated at checkout.
         </p>
         <div className="secure">
-          <button className="checkout-btn">Checkout</button>
+          <button
+            className="checkout-btn"
+            onClick={() => {
+              onClose();
+              navigate("/checkout");
+            }}
+          >
+            Checkout
+          </button>
+
           <button className="view-cart-btn">View Cart</button>
         </div>
       

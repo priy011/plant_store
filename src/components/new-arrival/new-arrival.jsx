@@ -16,13 +16,13 @@ export default function NewArrival({ setSelectedProduct }) {
             <div className="product-name">{item.name}</div>
             {item.rating && (
               <div className="rating">
-                ⭐ {item.rating} <span className="reviews">({item.reviews})</span>
+                {item.rating} <span className="reviews">({item.reviews})</span>
               </div>
             )}
             <p className="price">${item.price}</p>
             <button
               className="add-to-cart"
-              onClick={() => setSelectedProduct(item)}
+              onClick={()=>setSelectedProduct(item)}
             > Add to Cart
             </button>
           </div>

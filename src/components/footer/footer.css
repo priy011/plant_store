@@ -40,7 +40,6 @@
   color: #ccc;
 }
 
-/* ---------- MOBILE ---------- */
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: repeat(2, 1fr);

@@ -10,7 +10,6 @@ export default function GramSection() {
         {data.map((item, index) => (
           <div className="gram-item" key={index}>
             <img src={item.image} alt="" />
-
             {item.text && (
               <div className="gram-overlay">
                 <p>{item.text}</p>
